@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Warm UP</title>
+</head>
+<body>
+<canvas id="sketch" width="480" height="720"> </canvas>
+<script>
+var sketch;
+var context;
+document.addEventListener('DOMContentLoaded', main);
+function main() {
+	sketch = document.getElementById('sketch');
+	context = sketch.getContext("2d");
+	context.fillRect(80,80,180,180)
+	draw_circle(200,200,80)
+}
+function draw_circle(x, y, r) {
+	context.beginPath();
+	context.arc(x, y, r, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+}
+</script>
+</body>
+</html>
